@@ -1,5 +1,5 @@
 <?php
-mysql_connect("localhost","root","52x32x52x@");
+mysql_connect("localhost","root","XXXXX@");
 mysql_select_db("test");
 
 $result=mysql_query("select * from prod_master");
