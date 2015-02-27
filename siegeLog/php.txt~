@@ -1,0 +1,290 @@
+anirbanb2004@Anisoft-Corporation:~/nodecode/express$ siege -c1000 -d1 -r50 -lphp.log http://localhost/loadTest
+** SIEGE 3.0.5
+** Preparing 1000 concurrent users for battle.
+The server is now under siege..      done.
+
+Transactions:		      100000 hits
+Availability:		      100.00 %
+Elapsed time:		       66.37 secs
+Data transferred:	       28.90 MB
+Response time:		        0.00 secs
+Transaction rate:	     1506.70 trans/sec
+Throughput:		        0.44 MB/sec
+Concurrency:		        6.38
+Successful transactions:       50000
+Failed transactions:	           0
+Longest transaction:	        0.43
+Shortest transaction:	        0.00
+ 
+FILE: php.log
+
+
+anirbanb2004@Anisoft-Corporation:~/nodecode/express$ siege -c1000 -d1 -r50 -lnode.log http://localhost:9615/
+** SIEGE 3.0.5
+** Preparing 1000 concurrent users for battle.
+The server is now under siege..      done.
+
+Transactions:		       50000 hits
+Availability:		      100.00 %
+Elapsed time:		       51.86 secs
+Data transferred:	      168.99 MB
+Response time:		        0.38 secs
+Transaction rate:	      964.13 trans/sec
+Throughput:		        3.26 MB/sec
+Concurrency:		      364.46
+Successful transactions:       50000
+Failed transactions:	           0
+Longest transaction:	        1.59
+Shortest transaction:	        0.00
+ 
+FILE: node.log
+
+Longest transaction:	        1.57
+Shortest transaction:	        0.00
+ 
+FILE: node.log
+==================================================================================================
+anirbanb2004@Anisoft-Corporation:~$ siege -c100 -d1 -t10M -lnode.log http://localhost:9615/
+** SIEGE 3.0.5
+** Preparing 100 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...      done.
+
+Transactions:		      119236 hits
+Availability:		      100.00 %
+Elapsed time:		      599.74 secs
+Data transferred:	      403.00 MB
+Response time:		        0.00 secs
+Transaction rate:	      198.81 trans/sec
+Throughput:		        0.67 MB/sec
+Concurrency:		        0.61
+Successful transactions:      119236
+Failed transactions:	           0
+Longest transaction:	        0.05
+Shortest transaction:	        0.00
+ 
+FILE: node.log
+
+anirbanb2004@Anisoft-Corporation:~$ siege -c100 -d1 -t10M -lphp.log http://localhost/loadTest
+** SIEGE 3.0.5
+** Preparing 100 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...      done.
+
+Transactions:		      119632 hits
+Availability:		      100.00 %
+Elapsed time:		      599.47 secs
+Data transferred:	       34.58 MB
+Response time:		        0.00 secs
+Transaction rate:	      199.56 trans/sec
+Throughput:		        0.06 MB/sec
+Concurrency:		        0.12
+Successful transactions:       59858
+Failed transactions:	           0
+Longest transaction:	        0.03
+Shortest transaction:	        0.00
+ 
+FILE: php.log
+
+==========================================After Conection correction in node=======================================
+
+anirbanb2004@Anisoft-Corporation:~/nodecode/express/siegeLog$ siege -c100 -d1 -t10M -lnode.log http://localhost:9615/
+** SIEGE 3.0.5
+** Preparing 100 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...      done.
+
+Transactions:		      119100 hits
+Availability:		      100.00 %
+Elapsed time:		      599.80 secs
+Data transferred:	      402.54 MB
+Response time:		        0.00 secs
+Transaction rate:	      198.57 trans/sec
+Throughput:		        0.67 MB/sec
+Concurrency:		        0.54
+Successful transactions:      119100
+Failed transactions:	           0
+Longest transaction:	        0.07
+Shortest transaction:	        0.00
+ 
+FILE: node.log
+
+anirbanb2004@Anisoft-Corporation:~/nodecode/express/siegeLog$ siege -c100 -d1 -t10M -lphp.log http://localhost/loadTest/
+** SIEGE 3.0.5
+** Preparing 100 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...      done.
+
+Transactions:		      119964 hits
+Availability:		      100.00 %
+Elapsed time:		      599.33 secs
+Data transferred:	       59.03 MB
+Response time:		        0.00 secs
+Transaction rate:	      200.16 trans/sec
+Throughput:		        0.10 MB/sec
+Concurrency:		        0.36
+Successful transactions:      119964
+Failed transactions:	           0
+Longest transaction:	        0.04
+Shortest transaction:	        0.00
+ 
+FILE: php.log
+
+====================================================After Doing pool==============================================
+anirbanb2004@Anisoft-Corporation:~/nodecode/express/siegeLog$ siege -c100 -d1 -t10M -lnode.log http://localhost:9615/
+** SIEGE 3.0.5
+** Preparing 100 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...      done.
+
+Transactions:		      119171 hits
+Availability:		      100.00 %
+Elapsed time:		      599.32 secs
+Data transferred:	      402.78 MB
+Response time:		        0.00 secs
+Transaction rate:	      198.84 trans/sec
+Throughput:		        0.67 MB/sec
+Concurrency:		        0.67
+Successful transactions:      119171
+Failed transactions:	           0
+Longest transaction:	        0.10
+Shortest transaction:	        0.00
+ 
+FILE: node.log
+
+anirbanb2004@Anisoft-Corporation:~/nodecode/express/siegeLog$ siege -c100 -d1 -t10M -lphp.log http://localhost/loadTest/
+** SIEGE 3.0.5
+** Preparing 100 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...      done.
+
+Transactions:		      119429 hits
+Availability:		      100.00 %
+Elapsed time:		      599.04 secs
+Data transferred:	       58.77 MB
+Response time:		        0.00 secs
+Transaction rate:	      199.37 trans/sec
+Throughput:		        0.10 MB/sec
+Concurrency:		        0.36
+Successful transactions:      119429
+Failed transactions:	           0
+Longest transaction:	        0.04
+Shortest transaction:	        0.00
+ 
+FILE: php.log
+
+=================================+Aftr chnanging back to connection create========
+anirbanb2004@Anisoft-Corporation:~/nodecode/express/siegeLog$ siege -c100 -d1 -t10M -lnode.log http://localhost:9615/
+** SIEGE 3.0.5
+** Preparing 100 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...      done.
+
+Transactions:		      118836 hits
+Availability:		      100.00 %
+Elapsed time:		      599.53 secs
+Data transferred:	      401.64 MB
+Response time:		        0.00 secs
+Transaction rate:	      198.22 trans/sec
+Throughput:		        0.67 MB/sec
+Concurrency:		        0.53
+Successful transactions:      118836
+Failed transactions:	           0
+Longest transaction:	        0.06
+Shortest transaction:	        0.00
+ 
+FILE: node.log
+
+anirbanb2004@Anisoft-Corporation:~/nodecode/express/siegeLog$ siege -c100 -d1 -t10M -lphp.log http://localhost/loadTest/
+** SIEGE 3.0.5
+** Preparing 100 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...      done.
+
+Transactions:		      119555 hits
+Availability:		      100.00 %
+Elapsed time:		      599.92 secs
+Data transferred:	       58.83 MB
+Response time:		        0.00 secs
+Transaction rate:	      199.28 trans/sec
+Throughput:		        0.10 MB/sec
+Concurrency:		        0.39
+Successful transactions:      119555
+Failed transactions:	           0
+Longest transaction:	        0.22
+Shortest transaction:	        0.00
+ 
+FILE: php.log
+
+========================================With concurrent 500=======================================================
+
+anirbanb2004@Anisoft-Corporation:~/nodecode/express/siegeLog$ siege -c500 -d1 -t10M -lnode.log http://localhost:9615/
+** SIEGE 3.0.5
+** Preparing 500 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...      done.
+
+Transactions:		      596651 hits
+Availability:		      100.00 %
+Elapsed time:		      599.21 secs
+Data transferred:	        6.26 MB
+Response time:		        0.00 secs
+Transaction rate:	      995.73 trans/sec
+Throughput:		        0.01 MB/sec
+Concurrency:		        1.47
+Successful transactions:      596651
+Failed transactions:	           0
+Longest transaction:	        1.03
+Shortest transaction:	        0.00
+ 
+FILE: node.log
+
+siege aborted due to excessive socket failure; you
+can change the failure threshold in $HOME/.siegerc
+
+Transactions:		      313681 hits
+Availability:		       99.64 %
+Elapsed time:		      318.29 secs
+Data transferred:	      154.36 MB
+Response time:		        0.00 secs
+Transaction rate:	      985.52 trans/sec
+Throughput:		        0.48 MB/sec
+Concurrency:		        3.26
+Successful transactions:      313681
+Failed transactions:	        1137
+Longest transaction:	        1.02
+Shortest transaction:	        0.00
+ 
+FILE: php.log
+
+===========================================Final Test================================
+
+anirbanb2004@Anisoft-Corporation:~/nodecode/express$ siege -c500 -d1 -t10M -lnode.log http://localhost:9615/
+** SIEGE 3.0.5
+** Preparing 500 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...      done.
+
+Transactions:		      594566 hits
+Availability:		      100.00 %
+Elapsed time:		      599.95 secs
+Data transferred:	     2009.53 MB
+Response time:		        0.00 secs
+Transaction rate:	      991.03 trans/sec
+Throughput:		        3.35 MB/sec
+Concurrency:		        4.44
+Successful transactions:      594566
+Failed transactions:	           0
+Longest transaction:	        1.25
+Shortest transaction:	        0.00
+ 
+FILE: node.log
+
+anirbanb2004@Anisoft-Corporation:~/nodecode/express$ siege -c500 -d1 -t10M -lphp.log http://localhost/loadTest/
+** SIEGE 3.0.5
+** Preparing 500 concurrent users for battle.
+The server is now under siege...
+
+
+
+

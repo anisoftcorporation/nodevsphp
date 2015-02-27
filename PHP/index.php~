@@ -11,5 +11,7 @@ while($r=mysql_fetch_assoc($result))
 $data = json_encode($row,JSON_NUMERIC_CHECK);
 header('Content-Length:'.strlen($data));
 header("Content-Type:application/json");
+
+
 echo ($data);
 ?>

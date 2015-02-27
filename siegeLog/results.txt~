@@ -1,0 +1,148 @@
+=================================With 5 Minutes=====================================
+anirbanb2004@Anisoft-Corporation:~/www/loadTest/siegeLog$ siege -c500 -d1 -t5M -lnode1.log http://localhost:9615
+** SIEGE 3.0.5
+** Preparing 500 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...      done.
+
+Transactions:		      296509 hits
+Availability:		      100.00 %
+Elapsed time:		      299.75 secs
+Data transferred:	      830.79 MB
+Response time:		        0.00 secs
+Transaction rate:	      989.19 trans/sec
+Throughput:		        2.77 MB/sec
+Concurrency:		        4.20
+Successful transactions:      296509
+Failed transactions:	           0
+Longest transaction:	        0.20
+Shortest transaction:	        0.00
+ 
+FILE: node1.log
+
+
+
+anirbanb2004@Anisoft-Corporation:~/www/loadTest/siegeLog$ siege -c500 -d1 -t5M -lnphp1.log http://localhost/loadTest/PHP/
+** SIEGE 3.0.5
+** Preparing 500 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...      done.
+
+Transactions:		      298656 hits
+Availability:		      100.00 %
+Elapsed time:		      299.92 secs
+Data transferred:	      836.80 MB
+Response time:		        0.00 secs
+Transaction rate:	      995.79 trans/sec
+Throughput:		        2.79 MB/sec
+Concurrency:		        2.27
+Successful transactions:      298656
+Failed transactions:	           0
+Longest transaction:	        0.24
+Shortest transaction:	        0.00
+ 
+FILE: nphp1.log
+
+
+============================================ Running for 10 Minutes =====================================================
+
+anirbanb2004@Anisoft-Corporation:~/www/loadTest/siegeLog$ siege -c500 -d1 -t10M -lnode1.log http://localhost:9615
+** SIEGE 3.0.5
+** Preparing 500 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...      done.
+
+Transactions:		      594697 hits
+Availability:		      100.00 %
+Elapsed time:		      599.95 secs
+Data transferred:	     1666.28 MB
+Response time:		        0.00 secs
+Transaction rate:	      991.24 trans/sec
+Throughput:		        2.78 MB/sec
+Concurrency:		        3.84
+Successful transactions:      594697
+Failed transactions:	           0
+Longest transaction:	        0.20
+Shortest transaction:	        0.00
+ 
+FILE: node1.log
+
+anirbanb2004@Anisoft-Corporation:~/www/loadTest/siegeLog$ siege -c500 -d1 -t10M -lnphp1.log http://localhost/loadTest/PHP/
+** SIEGE 3.0.5
+** Preparing 500 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...      done.
+
+Transactions:		      597276 hits
+Availability:		      100.00 %
+Elapsed time:		      599.97 secs
+Data transferred:	     1673.50 MB
+Response time:		        0.00 secs
+Transaction rate:	      995.51 trans/sec
+Throughput:		        2.79 MB/sec
+Concurrency:		        1.94
+Successful transactions:      597276
+Failed transactions:	           0
+Longest transaction:	        0.20
+Shortest transaction:	        0.00
+ 
+FILE: nphp1.log
+
+======================================================15 Minutes========================================================
+
+anirbanb2004@Anisoft-Corporation:~/www/loadTest/siegeLog$ siege -c500 -d1 -t15M -lnode1.log http://localhost:9615
+** SIEGE 3.0.5
+** Preparing 500 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...      done.
+
+Transactions:		      892874 hits
+Availability:		      100.00 %
+Elapsed time:		      899.25 secs
+Data transferred:	     2501.74 MB
+Response time:		        0.00 secs
+Transaction rate:	      992.91 trans/sec
+Throughput:		        2.78 MB/sec
+Concurrency:		        3.74
+Successful transactions:      892874
+Failed transactions:	           0
+Longest transaction:	        0.25
+Shortest transaction:	        0.00
+ 
+FILE: node1.log
+
+anirbanb2004@Anisoft-Corporation:~/www/loadTest/siegeLog$ siege -c500 -d1 -t15M -lnphp1.log http://localhost/loadTest/PHP/
+** SIEGE 3.0.5
+** Preparing 500 concurrent users for battle.
+The server is now under siege...
+
+[error] socket: 1011885824 address is unavailable.: Cannot assign requested address
+[error] socket: -213448960 address is unavailable.: Cannot assign requested address
+[error] socket: -3631360 address is unavailable.: Cannot assign requested address
+
+Lifting the server siege...      done.
+
+Transactions:		      893948 hits
+Availability:		       99.96 %
+Elapsed time:		      899.70 secs
+Data transferred:	     2504.75 MB
+Response time:		        0.00 secs
+Transaction rate:	      993.61 trans/sec
+Throughput:		        2.78 MB/sec
+Concurrency:		        2.25
+Successful transactions:      893948
+Failed transactions:	         335
+Longest transaction:	        1.01
+Shortest transaction:	        0.00
+ 
+FILE: nphp1.log
+
+=======================================1K concurrent for 10 minutes ==============================
+anirbanb2004@Anisoft-Corporation:~/www/loadTest/siegeLog$ siege -c1000 -d1 -t10M -lnphp1.log http://localhost/loadTest/PHP/
+** SIEGE 3.0.5
+** Preparing 1000 concurrent users for battle.
+The server is now under siege...
+
+
+
+
